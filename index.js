@@ -7,7 +7,10 @@ const path = "./data.json";
 
 const markCommit = (x, y) => {
   const date = moment()
-    .subtract(5, "y")
+    function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+    }
+    .subtract(getRndInteger(2,7), "y")
     .add(1, "d")
     .add(x, "w")
     .add(y, "d")
