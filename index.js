@@ -8,10 +8,13 @@ function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 
+
 let counter = 0;
 
 const makeCommits = (n) => {
   if (n === 0) return;
+  counter++;
+  console.log(`Commit #${counter}`);
   
   const x = random.int(0, 54);
   const y = random.int(0, 6);
